@@ -27,22 +27,25 @@ public class Product {
     private String name;
 
     @Lob
-    @Column(name = "description")
+    @Column(name = "description", columnDefinition = "LONGTEXT")
     private String description;
 
     @Column(name = "price", nullable = false, precision = 10, scale = 2)
     private BigDecimal price;
 
+    @Lob
     @Column(name = "image_url")
     private String imageUrl;
 
-    @Column(name = "ingredient")
+    @Lob
+    @Column(name = "ingredient", columnDefinition = "LONGTEXT")
     private String ingredient;
 
-    @Column(name = "uses")
+    @Lob
+    @Column(name = "uses", columnDefinition = "LONGTEXT")
     private String uses;
 
     @Lob
-    @Column(name = "user_manual")
+    @Column(name = "user_manual", columnDefinition = "LONGTEXT")
     private String use;
 }
